@@ -1,0 +1,12 @@
+.p-button {
+  padding: 0.188rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: end;
+  font-size: 0.563rem;
+  border-radius: 0.25rem;
+  box-shadow: none;
+}
+.p-button .p-button-icon-right {
+  margin: 0 0.1rem !important;
+}

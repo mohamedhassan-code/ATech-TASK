@@ -1,0 +1,180 @@
+<section class="container">
+  <header class="container__header flex justify-between items-center">
+    <div class="container__header__title">
+      <img src="assets/icons/icon-title.svg" />
+      <h4>{{ "title" | translate }}</h4>
+    </div>
+    <img
+      class="container__header__closeIcon"
+      src="assets/icons/closeIcon.svg"
+      (click)="__dialogRef.close()"
+    />
+  </header>
+  <section class="container__overFlow">
+    <section class="container__content">
+      <div class="container__content__title flex">
+        <h4>{{ "buyingTitle" | translate }}</h4>
+        <img src="assets/icons/bay.svg" />
+      </div>
+
+      <article class="container__content__cards flex justify-between">
+        <article class="container__content__cards__selectCliant">
+          <fieldset class="flex items-center">
+            <figure class="user">
+              <img src="assets/icons/profile-2user.svg" />
+            </figure>
+            <p class="text">
+              {{ "selectClient" | translate }}
+              <span>{{ "customerChoose" | translate }}</span>
+            </p>
+          </fieldset>
+          <fieldset class="dropDown">
+            <div class="search-container">
+              <input
+                type="text"
+                [(ngModel)]="searchQuery"
+                placeholder="{{ 'search' | translate }}"
+              />
+              <img
+                [ngClass]="currentLang == 'en' ? 'En' : 'Ar'"
+                src="assets/icons/search-normal.svg"
+              />
+            </div>
+            @if (searchQuery) {
+            <ul>
+              @for (contact of filteredContacts; track $index; let last=$last) {
+              <li
+                class="flex justify-between items-center"
+                [ngClass]="{ border: !last }"
+              >
+                <img [src]="contact.image" alt="{{ contact.name }}" />
+                <p>{{ contact.name }}</p>
+                <p>{{ contact.phone }}</p>
+              </li>
+              }
+            </ul>
+            }
+          </fieldset>
+        </article>
+        <article class="container__content__cards__transPrice">
+          <fieldset class="flex items-center">
+            <figure class="user">
+              <img src="assets/icons/wallet-minus.svg" />
+            </figure>
+            <p class="text">
+              {{ "transPrice" | translate }}
+              <span>{{ "transPrice_B" | translate }}</span>
+            </p>
+          </fieldset>
+          <fieldset class="inputPrice" disabled>$50,000</fieldset>
+        </article>
+      </article>
+      <article class="container__content__transaction">
+        <article class="flex justify-content-between items-center">
+          <div class="questionContent flex items-center">
+            <img src="assets/icons/question.svg" />
+            <h4>{{ "transaction" | translate }}</h4>
+            <img src="assets/icons/note.svg" />
+          </div>
+          <article>
+            <div [ngClass]="currentLang === 'en' ? 'progressEn' : 'progressAr'">
+              <p-slider
+                pTooltip="55%"
+                tooltipPosition="top"
+                [(ngModel)]="value"
+              ></p-slider>
+            </div>
+            <div class="counter flex">
+              <span class="percent">10%</span>
+              <span class="percent">20%</span>
+              <span class="percent">30%</span>
+              <span class="percent">40%</span>
+              <span class="percent">50%</span>
+              <span class="percent">60%</span>
+              <span class="percent">70%</span>
+              <span class="percent">80%</span>
+              <span class="percent">90%</span>
+              <span class="percent">100%</span>
+            </div>
+          </article>
+        </article>
+      </article>
+      <article
+        class="container__content__social flex items-center justify-between"
+      >
+        <fieldset class="user">
+          <p class="title">{{ "transactionResponsible" | translate }}</p>
+          <div class="card user flex justify-between items-center">
+            <figure class="flex items-center">
+              <img src="assets/images/user.png" />
+              <p>{{ "name" | translate }}</p>
+            </figure>
+            <img src="assets/icons/addUser.svg" />
+          </div>
+        </fieldset>
+        <fieldset class="basicCard">
+          <p class="title">{{ "source" | translate }}</p>
+          <div class="card flex justify-between items-center">
+            <figure class="flex items-center">
+              <img src="assets/icons/Instagram.svg" />
+              <p>{{ "instagram" | translate }}</p>
+            </figure>
+            <img src="assets/icons/arrow-down.svg" />
+          </div>
+        </fieldset>
+        <fieldset class="basicCard">
+          <p class="title">{{ "project" | translate }}</p>
+          <div class="card flex justify-between items-center">
+            <figure class="flex items-center">
+              <img src="assets/icons/Miro.svg" />
+              <p>{{ "name" | translate }}</p>
+            </figure>
+            <img src="assets/icons/arrow-down.svg" />
+          </div>
+        </fieldset>
+      </article>
+      <article class="container__content__chips">
+        <p class="tag">{{ "tags" | translate }}</p>
+        <p-chips [showClear]="false" placeholder="44" [(ngModel)]="values">
+        </p-chips>
+      </article>
+      <article class="container__content__products">
+        <div class="flex product items-center">
+          <img src="assets/icons/Vector.svg" />
+          <p>{{ "products" | translate }}</p>
+          <figure class="zero">00</figure>
+        </div>
+        <div class="addProduct flex justify-between items-center">
+          <img src="assets/icons/product.svg" />
+          <fieldset>
+            <p class="title">{{ "noProducts" | translate }}</p>
+            <p class="desc">{{ "noProducts_B" | translate }}</p>
+          </fieldset>
+          <p-button
+            [label]="'addProduct' | translate"
+            icon="pi pi-plus-circle"
+            iconPos="right"
+          ></p-button>
+        </div>
+      </article>
+      <footer class="container__content__Information">
+        <P class="text">{{ "additionalInformation" | translate }}</P>
+      </footer>
+    </section>
+    <div class="contract">
+      <div class="buttons flex justify-between items-center">
+        <p-button
+          [label]="'addProduct' | translate"
+          icon="pi pi-angle-down"
+          iconPos="right"
+        ></p-button>
+        <div>
+          <button class="btn flex items-center">
+            <img src="assets/icons/document-text.svg" alt="" />
+            {{ "contract" | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

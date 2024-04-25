@@ -1,0 +1,37 @@
+.p-chips {
+  ul {
+    font-size: 0.625rem;
+    border: 0.5px solid #83899f66;
+    padding: 0.2rem;
+
+    li {
+      border-radius: 0.375rem;
+      input {
+        background: white !important;
+        font-size: 0.625rem;
+        width: 6rem;
+      }
+      .p-icon-wrapper {
+        display: none;
+      }
+      &:nth-child(1) {
+        background: #dd6b201a;
+        color: #dd6b20;
+      }
+
+      &:nth-child(2) {
+        background: #38a1691a;
+        color: #38a169;
+      }
+
+      &:nth-child(3) {
+        background: #5b4fe91a;
+        color: #5b4fe9;
+      }
+    }
+  }
+}
+
+.p-disabled {
+  opacity: 1;
+}

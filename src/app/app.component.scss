@@ -1,0 +1,25 @@
+.container {
+  margin-top: 10rem;
+  gap: 1rem;
+}
+.button {
+  display: inline-block;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #08588e;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.dialog {
+  background-color: rgb(10, 38, 173);
+}

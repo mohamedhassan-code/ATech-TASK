@@ -1,0 +1,281 @@
+.container {
+  height: 100%;
+  &__header {
+    font-size: 0.75rem;
+    padding: 0.8rem;
+    font-weight: 500;
+    background: white;
+    border-bottom: 0.041rem solid #dadce2;
+
+    &__closeIcon {
+      width: 1.45rem;
+      cursor: pointer;
+      border-radius: 0.306rem;
+    }
+    &__title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      h4 {
+        font-weight: bold;
+      }
+    }
+  }
+  &__overFlow {
+    height: 91%;
+    overflow-y: auto;
+    background: #fafafa;
+  }
+  &__content {
+    display: grid;
+    gap: 0.8rem;
+    height: 93%;
+    border: 0;
+    padding: 0 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    &__title {
+      gap: 0.7rem;
+      height: min-content;
+      padding: 0.8rem 0 0 0;
+      h4 {
+        width: 80%;
+        border: 0.041rem solid #83899f66;
+        background-color: white;
+        height: max-content;
+        padding: 0.4rem;
+        border-radius: 0.375rem;
+      }
+    }
+    &__cards {
+      gap: 1.2rem;
+
+      &__selectCliant {
+        height: 4.563rem;
+        width: 52.1%;
+        background: #f6faff;
+        border: 0.031rem dashed #0771de;
+        border-radius: 0.5rem;
+        .user {
+          background: white;
+          margin: 0.4rem;
+          border-radius: 0.375rem;
+          padding: 0.3rem 0.3rem 0rem 0.3rem;
+        }
+        .text {
+          height: max-content;
+          color: #1c1c28;
+          font-weight: 400;
+          font-size: 0.625rem;
+          display: grid;
+          span {
+            font-size: 0.5rem;
+            color: #83899f;
+          }
+        }
+        .dropDown {
+          padding: 0.3rem;
+          display: block;
+          width: 94%;
+          ul {
+            position: sticky;
+            background-color: white;
+            list-style: none;
+            font-size: 0.7rem;
+            li {
+              padding: 0.3rem;
+            }
+            .border {
+              border-bottom: 0.031rem solid #83899f66;
+            }
+          }
+          .search-container {
+            position: relative;
+            img {
+              position: absolute;
+              top: 25%;
+            }
+            .Ar {
+              left: 0.5rem;
+            }
+
+            .En {
+              right: 0.5rem;
+            }
+          }
+
+          .search-container input {
+            width: 100%;
+            height: 1.3rem;
+            border-radius: 0.25rem;
+            font-size: 0.5rem;
+            outline: none;
+            border: 0.025rem solid #0771de;
+          }
+        }
+      }
+      &__transPrice {
+        width: 50%;
+        background: white;
+        border: 0.5px solid #83899f4d;
+        border-radius: 0.5rem;
+        .user {
+          background: #e8f2ff;
+          margin: 0.4rem;
+          border-radius: 0.375rem;
+          padding: 0.3rem 0.3rem 0rem 0.3rem;
+        }
+        .text {
+          height: max-content;
+          color: #1c1c28;
+          font-weight: 400;
+          font-size: 0.625rem;
+          display: grid;
+          span {
+            font-size: 0.5rem;
+            color: #83899f;
+          }
+        }
+        .inputPrice {
+          display: block;
+          width: 90.5%;
+          margin: auto;
+          background: #fafafa;
+          height: 1.375rem;
+          font-size: 0.875rem;
+          border-radius: 0.25rem;
+          text-align: center;
+          font-weight: 500;
+          border: 0.025rem solid #83899f4d;
+        }
+      }
+    }
+    &__transaction {
+      background: white;
+      border-radius: 0.375rem;
+      border: 0.031rem solid #83899f66;
+      .questionContent {
+        width: 49%;
+        padding: 1rem;
+        gap: 0.5rem;
+      }
+      .progressAr {
+        clip-path: polygon(100% 50.4%, 99.6% 59.6%, 0% 100%, 0% 0%);
+      }
+      .progressEn {
+        width: 100%;
+        clip-path: polygon(0% 50.4%, 0.4% 59.6%, 100% 100%, 100% 0%);
+      }
+      .counter {
+        gap: 0.3rem;
+        .percent {
+          font-size: 0.5rem;
+          color: #83899f;
+        }
+      }
+    }
+    &__social {
+      gap: 0.6rem;
+      .user {
+        width: 38% !important;
+      }
+      .basicCard {
+        width: 30%;
+      }
+      .title {
+        font-size: 0.625rem;
+        font-weight: 400;
+        margin-bottom: 0.2rem;
+      }
+      .card {
+        width: auto !important;
+        padding: 0.3rem;
+        height: 2rem;
+        border: 0.031rem solid #83899f66;
+        border-radius: 0.313rem;
+        background: white;
+
+        figure {
+          gap: 0.5rem;
+          p {
+            font-size: 0.688rem;
+            width: max-content;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    &__chips {
+      .tag {
+        margin-bottom: 0.2rem;
+      }
+    }
+    &__products {
+      border-radius: 0.313rem;
+      background: white;
+      border: 0.5px solid #83899f66;
+      .product {
+        border-bottom: 0.031rem solid #83899f66;
+        padding: 0.5rem;
+        gap: 0.2rem;
+        .zero {
+          border: 0.033rem solid #edf2ef;
+          padding: 0.2rem;
+          border-radius: 0.219rem;
+          color: #898995;
+          font-size: 0.6rem;
+        }
+      }
+      .addProduct {
+        width: 80%;
+        margin: auto;
+        padding: 0.8rem 0;
+        .title {
+          font-size: 0.625rem;
+          font-weight: 400;
+        }
+        .desc {
+          font-size: 0.5rem;
+          font-weight: 400;
+          color: #83899f;
+        }
+      }
+    }
+    &__Information {
+      background: #fafafa;
+      .text {
+        border-radius: 0.313rem;
+
+        border: 0.5px solid #83899f66;
+        background: white;
+        font-size: 0.75rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+  .contract {
+    background: white;
+    border-top: 0.5px solid #83899f4d;
+    margin-top: 0.8rem;
+    .buttons {
+      width: 94%;
+      margin: auto;
+
+      .btn {
+        background: #e0e1f4;
+        color: #9599d8;
+        margin: 0.7rem 0;
+        font-size: 0.563rem;
+        border: 0.031rem solid #e0e1f4;
+        padding: 0.1rem 0;
+        border-radius: 0.25rem;
+      }
+    }
+  }
+}
+
+::ng-deep {
+  .pi {
+    font-size: 0.7rem !important;
+  }
+}

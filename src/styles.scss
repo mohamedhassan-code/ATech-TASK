@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+// @use "index" as *;
+
+@use "./styles/base" as *;
+@use "./styles/components" as *;
+body {
+  background-image: url("./assets/images/wp11742862.jpg");
+  padding: 0;
+  margin: 0;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+figure,
+fieldset {
+  all: initial;
+}
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(111, 111, 255);
+  border-radius: 0.6rem;
+}
